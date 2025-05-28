@@ -1,130 +1,152 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Robert A. Houst - Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.8;
-    }
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #007bff;
-      padding: 15px 0;
-      text-align: center;
-      z-index: 1000;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .navbar a {
-      margin: 0 20px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    .navbar a:hover {
-      color: #d4edda;
-    }
-    .container {
-      max-width: 900px;
-      margin: 120px auto;
-      background: #ffffff;
-      padding: 50px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.8rem;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
-    .contact {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 1.1rem;
-    }
-    .contact a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .section {
-      margin-bottom: 35px;
-      padding-bottom: 25px;
-      border-bottom: 2px solid #ddd;
-    }
-    ul {
-      list-style: none;
-      padding-left: 15px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .project-details {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert A. Houst - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.8;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #007bff;
+            padding: 15px 0;
+            text-align: center; 
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #d4edda;
+        }
+        .container {
+            max-width: 900px;
+            margin: 120px auto;
+            background: #ffffff;
+            padding: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.8rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .contact {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #ddd;
+        }
+        ul {
+            list-style: none;
+            padding-left: 15px;
+        }
+        li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #007bff;
+            transition: 0.3s;
+        }
+        li:hover {
+            color: #0056b3;
+        }
+        .project-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+        .skills-list {
+            margin-top: 10px;
+        }
+        .skills-list li {
+            color: #000;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    </style>
+    <script>
+        function toggleProjectDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
-  <div class="navbar">
-    <a href="#objective">Objective</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#awards">Achievements</a>
-    <a href="#interests">Interests</a>
-  </div>
-
-  <div class="container">
-    <h1>Robert A. Houst</h1>
-    <p class="contact">
-      Email: <a href="mailto:robertallenhoust@gmail.com">robertallenhoust@gmail.com</a> | rahoust@miners.utep.edu<br/>
-      LinkedIn: <a href="https://www.linkedin.com/in/roberthoust" target="_blank">linkedin.com/in/roberthoust</a><br/>
-      Portfolio: <a href="https://roberthoust.github.io/resume/" target="_blank">roberthoust.github.io/resume</a>
-    </p>
-
-    <div class="section" id="objective">
-      <h2>Objective</h2>
-      <p>Driven Computer Science student at UTEP with a perfect 4.0 GPA and hands-on experience in developing scalable, efficient, and user-friendly software solutions. Passionate about backend development, UI/UX design, and delivering high-quality user support. Seeking an internship to apply both technical and communication skills to impactful projects.</p>
+    <div class="navbar">
+        <a href="#objective">Objective</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#interests">Interests</a>
     </div>
 
-    <div class="section" id="education">
-      <h2>Education</h2>
-      <p><strong>The University of Texas at El Paso (UTEP)</strong><br/>
-      Bachelor of Science in Computer Science | Expected Graduation: Spring 2026<br/>
-      GPA: 4.0<br/>
-      Relevant Coursework: Advanced OOP, Data Structures, Automata Theory, Programming Language Concepts, Database Systems</p>
-    </div>
+    <div class="container">
+        <h1>Robert A. Houst</h1>
+        <p class="contact">Email: <a href="mailto:robertallenhoust@gmail.com">robertallenhoust@gmail.com</a></p>
+        <p class="contact">LinkedIn: <a href="https://www.linkedin.com/in/roberthoustrps/" target="_blank">linkedin.com/in/roberthoustrps</a></p>
 
-    <div class="section" id="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Programming Languages:</strong> Java (SOLID principles), Python; familiar with PHP, C, C++, JavaScript</li>
-        <li><strong>Web Development:</strong> React (UI/UX design), PHP (backend APIs), MySQL</li>
-        <li><strong>Tools & Technologies:</strong> Git, Linux/Unix, SQL, Agile methodologies</li>
-        <li><strong>Strengths:</strong> Debugging, scalable software design, technical support, teamwork, communication under pressure</li>
-        <li><strong>Customer Support:</strong> Zendesk, scripted responses, blockchain analysis, user education</li>
-      </ul>
-    </div>
+        <div class="section" id="objective">
+            <h2>Objective</h2>
+            <p>Driven Computer Science student at UTEP with a 4.0 GPA and hands-on experience in scalable, user-friendly software solutions. Seeking an internship opportunity to contribute technical expertise to impactful projects.</p>
+        </div>
 
-    <div class="section" id="projects">
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <p><strong>The University of Texas at El Paso (UTEP)</strong></p>
+            <p>Bachelor of Science in Computer Science | Expected Graduation: Spring 2026</p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Programming Languages:</strong> Proficient in Java, Python; familiar with C, C++, JavaScript.</li>
+                <li><strong>Web Development:</strong> React for dynamic websites, HTML, CSS.</li>
+                <li><strong>Tools & Technologies:</strong> Git, Linux/Unix, SQL databases.</li>
+                <li><strong>Strengths:</strong> Debugging, problem-solving, Agile methodologies.</li>
+            </ul>
+        </div>
+
+
+        <div class="section" id="projects">
             <h2>Projects</h2>
             <ul>
                 <li onclick="toggleProjectDetails('c4api')">🔹 Connect Four Web API (PHP, MySQL)</li>
@@ -154,32 +176,16 @@
             </ul>
         </div>
 
-    <div class="section" id="experience">
-      <h2>Experience</h2>
-      <p><strong>Certified Process Server – Self-Employed</strong><br/>
-      El Paso, TX | Mar 2021 – Present<br/>
-      Delivered legal documents under state law. Managed communication, scheduling, and finances independently while maintaining academic performance.</p>
+        <div class="section" id="experience">
+            <h2>Experience</h2>
+            <p><strong>Self-Employed | Certified Process Server</strong> | March 2021 – Present</p>
+            <p>Managed legal document deliveries, scheduling, and financial operations with strong time management.</p>
+        </div>
 
-      <p><strong>Customer Support & Community Moderator – Safemoon LLC</strong><br/>
-      Remote | Jun 2021 – Sep 2024<br/>
-      Supported users during live crypto wallet events. Diagnosed sync/login issues, guided token migrations, analyzed blockchain data to resolve wallet problems. Trained new moderators in technical support and communication.</p>
+        <div class="section" id="interests">
+            <h2>Interests</h2>
+            <p>Open-source development, scalable software design, and cloud computing.</p>
+        </div>
     </div>
-
-    <div class="section" id="awards">
-      <h2>Awards & Achievements</h2>
-      <ul>
-        <li>Dean’s List (Multiple Semesters)</li>
-        <li>Peer-recognized for top support at Safemoon LLC</li>
-        <li>Led user education during a major token migration</li>
-        <li>High success rate in resolving wallet and blockchain issues</li>
-        <li>Maintained a 4.0 GPA through core CS curriculum</li>
-      </ul>
-    </div>
-
-    <div class="section" id="interests">
-      <h2>Interests</h2>
-      <p>Open-source contribution, scalable systems, backend logic, improving customer experience through analytics, and technical education.</p>
-    </div>
-  </div>
 </body>
 </html>
