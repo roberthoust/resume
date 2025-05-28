@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert A. Houst - Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Robert A. Houst - Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -74,15 +75,10 @@
         }
         li {
             margin-bottom: 10px;
-            font-weight: 600;
-            transition: 0.3s;
-            cursor: default; /* Not clickable */
-            user-select: text;
-            pointer-events: none; /* Prevents click events */
-        }
-        li a {
-            pointer-events: auto; /* Allow links to be clickable */
             cursor: pointer;
+            font-weight: 600;
+            color: #007bff;
+            transition: 0.3s;
         }
         li:hover {
             color: #0056b3;
@@ -102,15 +98,138 @@
             font-weight: 500;
             font-size: 1rem;
         }
-        /* Make all links blue except navbar */
-        a:not(.navbar a) {
-            color: #007bff;
-        }
-        a:not(.navbar a):hover {
-            color: #0056b3;
-        }
-    </style>
-    <script>
+    
+    .section ul li {
+        color: #333 !important;
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: default;
+        pointer-events: none;
+    }
+    #projects ul li {
+        color: #007bff !important;
+        font-weight: 600;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    
+body {
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+h1, h2 {
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    border-bottom: 2px solid #dfe6e9;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.container {
+    background: #fff;
+    padding: 60px 50px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 120px;
+}
+
+.section p,
+.section ul li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #34495e;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+.navbar {
+    background-color: #1a73e8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #d4edda;
+}
+
+.contact {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    color: #34495e;
+}
+
+a:not(.navbar a) {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:not(.navbar a):hover {
+    color: #0b59c7;
+    text-decoration: underline;
+}
+
+#projects ul li {
+    color: #1a73e8 !important;
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.section ul li {
+    color: #34495e !important;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+    .section {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+    }
+    .section::after {
+        content: "";
+        display: block;
+        margin-top: 25px;
+        border-bottom: 2px solid #ddd;
+    }
+    
+.section {
+    margin-bottom: 35px;
+    padding-bottom: 0;
+}
+.section::after {
+    content: "";
+    display: block;
+    margin-top: 25px;
+    border-bottom: 2px solid #ddd;
+}
+</style>
+<script>
         function toggleProjectDetails(id) {
             var details = document.getElementById(id);
             if (details.style.display === "none" || details.style.display === "") {
@@ -122,123 +241,49 @@
     </script>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#objective">Objective</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#interests">Interests</a>
-    </div>
-
-    <div class="container">
-        <h1>Robert A. Houst</h1>
-        <p class="contact">Email: <a href="mailto:robertallenhoust@gmail.com">robertallenhoust@gmail.com</a></p>
-        <p class="contact">LinkedIn: <a href="https://www.linkedin.com/in/roberthoustrps/" target="_blank">linkedin.com/in/roberthoustrps</a></p>
-
-        <!-- OBJECTIVE -->
-        <div class="section" id="objective">
-            <h2>Objective</h2>
-            <p>Motivated Computer Science student at UTEP with a 4.0 GPA and practical experience in building efficient, scalable, and user-centered software. Looking for an internship where I can contribute strong backend development, UI/UX, and technical support skills to meaningful projects.</p>
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="section" id="education">
-            <h2>Education</h2>
-            <p><strong>The University of Texas at El Paso (UTEP)</strong></p>
-            <p>Bachelor of Science in Computer Science — <em>Expected Spring 2026</em></p>
-            <p>GPA: 4.0</p>
-            <p>Relevant Coursework: Advanced Object-Oriented Programming, Data Structures, Automata Theory, Programming Language Concepts, Database Systems</p>
-        </div>
-
-        <!-- SKILLS -->
-        <div class="section" id="skills">
-            <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li><strong>Programming:</strong> Proficient in Java (SOLID principles), Python; familiar with PHP, C, C++, JavaScript</li>
-                <li><strong>Web Development:</strong> React (UI/UX), PHP (RESTful APIs), MySQL</li>
-                <li><strong>Tools & Tech:</strong> Git, Linux/Unix, SQL, Agile methodologies</li>
-                <li><strong>Strengths:</strong> Debugging, scalable software design, clear communication under pressure</li>
-                <li><strong>Customer Support:</strong> Zendesk, scripted responses, blockchain issue resolution, user education</li>
-            </ul>
-        </div>
-
-
-        <div class="section" id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li onclick="toggleProjectDetails('c4api')">🔹 Connect Four Web API (PHP, MySQL)</li>
-                <div class="project-details" id="c4api">
+<div class="navbar">
+<a href="#objective">Objective</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#interests">Interests</a>
+</div>
+<div class="container">
+<h1>Robert A. Houst</h1>
+<p class="contact">Email: <a href="mailto:robertallenhoust@gmail.com">robertallenhoust@gmail.com</a></p>
+<p class="contact">LinkedIn: <a href="https://www.linkedin.com/in/roberthoustrps/" target="_blank">linkedin.com/in/roberthoustrps</a></p>
+<div class="section" id="objective"><h2>Objective</h2><p>Driven Computer Science student at UTEP with a perfect 4.0 GPA and hands-on experience in developing scalable, efficient, and user-friendly software solutions. In addition to software engineering, I bring strong customer service and community moderation experience from working in fast-paced tech environments. Passionate about backend development, UI/UX design, and delivering high-quality user support, I’m seeking an internship where I can apply both technical and communication skills to impactful projects.</p></div>
+<div class="section" id="education"><h2>Education</h2><p><strong>🎓 The University of Texas at El Paso (UTEP)</strong></p><p>📅 Bachelor of Science in Computer Science | Expected Graduation: Spring 2026</p><p>📊 GPA: 4.0</p><p>📚 Relevant Coursework: Advanced Object-Oriented Programming, Data Structures, Automata Theory, Programming Language Concepts, Database Systems</p></div>
+<div class="section" id="skills"><h2>Technical Skills</h2><p><strong>Programming Languages:</strong> Java (SOLID principles), Python; familiar with PHP, C, C++, JavaScript.</p><p><strong>Web Development:</strong> React (UI/UX design), PHP (backend APIs), MySQL.</p><p><strong>Tools &amp; Technologies:</strong> Git, Linux/Unix, SQL, Agile methodologies.</p><p><strong>Strengths:</strong> Debugging, problem-solving, scalable software design, technical support, teamwork, clear communication under pressure.</p><p><strong>Customer Service &amp; Support:</strong> Zendesk, scripted responses, blockchain analysis, user education.</p></div>
+<div class="section" id="projects">
+<h2>Projects</h2>
+<ul>
+<li onclick="toggleProjectDetails('c4api')" style="cursor: pointer; pointer-events: auto;">🔹 Connect Four Web API (PHP, MySQL)</li>
+<div class="project-details" id="c4api">
                     Developed a RESTful web service for a Connect Four game using PHP and MySQL.
                     Implemented stateless communication for multiple concurrent games via an external Java client.
                 </div>
-                
-                <li onclick="toggleProjectDetails('mp3player')">🔹 Modern MP3 Player (Python, Pygame, CustomTkinter)</li>
-                <div class="project-details" id="mp3player">
+<li onclick="toggleProjectDetails('mp3player')" style="cursor: pointer; pointer-events: auto;">🔹 Modern MP3 Player (Python, Pygame, CustomTkinter)</li>
+<div class="project-details" id="mp3player">
                     Built a fully functional music player in Python, featuring MP3 playback, persistent folder management, and a sleek UI.
                     Designed a toggleable directory viewer, shuffle functionality, and volume control for an intuitive experience.
                 </div>
-                
-                <li onclick="toggleProjectDetails('carplatform')">🔹 Car Dealership Management Platform (Java, SQL)</li>
-                <div class="project-details" id="carplatform">
-                    <li><a href="docs/Ca_Dealership_Lab_Report.pdf" target="_blank">Project Report (PDF)</a></li>
+<li onclick="toggleProjectDetails('carplatform')" style="cursor: pointer; pointer-events: auto;">🔹 Car Dealership Management Platform (Java, SQL)</li>
+<div class="project-details" id="carplatform">
+<li style="cursor: pointer; pointer-events: auto;"><a href="docs/Ca_Dealership_Lab_Report.pdf" target="_blank">Project Report (PDF)</a></li>
 
                     Engineered a Java-based inventory system following SOLID design principles.
                     Implemented role-based authentication with admin and customer logins.
                 </div>
-                
-                <li onclick="toggleProjectDetails('reactsite')">🔹 Responsive React Website (React, JavaScript, CSS)</li>
-                <div class="project-details" id="reactsite">
+<li onclick="toggleProjectDetails('reactsite')" style="cursor: pointer; pointer-events: auto;">🔹 Responsive React Website (React, JavaScript, CSS)</li>
+<div class="project-details" id="reactsite">
                     Developed a mobile-responsive website using React with reusable components and smooth animations.
                 </div>
-            </ul>
-        </div>
-
-
-    <!-- EXPERIENCE -->
-    <div class="section" id="experience">
-        <h2>Experience</h2>
-        <div style="margin-bottom:18px;">
-            <strong>Certified Process Server – Self-Employed</strong><br>
-            <span>El Paso, TX | March 2021 – Present</span>
-            <ul>
-                <li>Delivered legal documents in compliance with Texas laws</li>
-                <li>Managed all scheduling, client communication, and finances independently</li>
-                <li>Balanced professional duties with full academic workload</li>
-            </ul>
-        </div>
-        <div>
-            <strong>Customer Support & Community Moderator – Safemoon LLC</strong><br>
-            <span>Remote | June 2021 – September 2024</span>
-            <ul>
-                <li>Provided real-time support for a crypto wallet across multiple blockchains</li>
-                <li>Resolved login, sync, and token migration issues during live service events</li>
-                <li>Analyzed blockchain transactions to recover lost funds</li>
-                <li>Led onboarding and training for new moderators in technical and communication practices</li>
-            </ul>
-        </div>
-    </div>
-
-        <!-- AWARDS & ACHIEVEMENTS -->
-    <div class="section" id="awards">
-        <h2>Awards & Achievements</h2>
-        <ul>
-            <li>Dean’s List (Multiple Semesters)</li>
-            <li>Recognized internally at Safemoon for exceptional user support</li>
-            <li>Led successful community education during token migration</li>
-            <li>High success rate in resolving crypto wallet issues</li>
-            <li>Maintained a 4.0 GPA through advanced CS coursework</li>
-        </ul>
-    </div>
-
-    <!-- INTERESTS -->
-    <div class="section" id="interests">
-        <h2>Interests</h2>
-        <ul>
-            <li>Open-source contributions, backend architecture, and logic design</li>
-            <li>Technical communication and user education</li>
-            <li>Improving UX via feedback loops and data-driven iteration</li>
-        </ul>
-    </div>
+</ul>
+</div>
+<div class="section" id="experience" style="line-height: 1.4;"><h2>Experience</h2><div style="margin-bottom:18px;"><strong>Certified Process Server – Self-Employed</strong><br/><span>📍 El Paso, TX | March 2021 – Present</span><ul><li style="cursor: default; user-select: text; pointer-events: none;">• Delivered legal documents in compliance with state regulations</li><li style="cursor: default; user-select: text; pointer-events: none;">• Independently managed communication, scheduling, and finances</li><li style="cursor: default; user-select: text; pointer-events: none;">• Balanced work with academic load, developing strong time management</li></ul></div><div><strong>Customer Support &amp; Community Moderator – Safemoon LLC</strong><br/><span>📍 Remote | June 2021 – September 2024</span><ul><li style="cursor: default; user-select: text; pointer-events: none;">• Supported users of a multi-chain crypto wallet during live service events</li><li style="cursor: default; user-select: text; pointer-events: none;">• Diagnosed technical issues, resolved sync/login errors, and led users through token migrations</li><li style="cursor: default; user-select: text; pointer-events: none;">• Investigated blockchain ledgers to recover lost funds and educate customers on crypto safety</li><li style="cursor: default; user-select: text; pointer-events: none;">• Trained new moderators on professional communication and technical issue resolution</li></ul></div></div>
+<div class="section" id="interests"><h2>Interests</h2><ul><li style="cursor: default; user-select: text; pointer-events: none;">💻 Open-source software contribution, scalable system design, and backend logic</li><li style="cursor: default; user-select: text; pointer-events: none;">🤝 Building trust through clear, technical communication and user education</li><li style="cursor: default; user-select: text; pointer-events: none;">📈 Enhancing customer experience through feedback, analytics, and iterative improvement</li></ul></div>
+</div>
 </body>
 </html>
