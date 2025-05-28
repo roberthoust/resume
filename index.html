@@ -86,7 +86,7 @@
             color: #0056b3;
         }
         .project-details {
-            display: block; /* Always show project details */
+            display: none;
             margin-top: 10px;
             padding: 10px;
             background: #f1f1f1;
@@ -109,9 +109,10 @@
         pointer-events: none;
     }
     #projects ul li {
-        cursor: default !important;
-        pointer-events: none !important;
-        color: #1a73e8 !important;
+        color: #007bff !important;
+        font-weight: 600;
+        cursor: pointer;
+        pointer-events: auto;
     }
     
 body {
@@ -199,9 +200,10 @@ a:not(.navbar a):hover {
 }
 
 #projects ul li {
-    cursor: default !important;
-    pointer-events: none !important;
     color: #1a73e8 !important;
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .section ul li {
@@ -237,6 +239,16 @@ a:not(.navbar a):hover {
     line-height: 1.2;
 }
 </style>
+<script>
+        function toggleProjectDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="navbar">
@@ -257,31 +269,27 @@ a:not(.navbar a):hover {
 <div class="section" id="projects">
 <h2>Projects</h2>
 <ul>
-<li style="cursor: default; pointer-events: none;">🔹 Connect Four Web API (PHP, MySQL)
+<li onclick="toggleProjectDetails('c4api')" style="cursor: pointer; pointer-events: auto;">🔹 Connect Four Web API (PHP, MySQL)</li>
 <div class="project-details" id="c4api">
                     Developed a RESTful web service for a Connect Four game using PHP and MySQL.
                     Implemented stateless communication for multiple concurrent games via an external Java client.
                 </div>
-</li>
-<li style="cursor: default; pointer-events: none;">🔹 Modern MP3 Player (Python, Pygame, CustomTkinter)
+<li onclick="toggleProjectDetails('mp3player')" style="cursor: pointer; pointer-events: auto;">🔹 Modern MP3 Player (Python, Pygame, CustomTkinter)</li>
 <div class="project-details" id="mp3player">
                     Built a fully functional music player in Python, featuring MP3 playback, persistent folder management, and a sleek UI.
                     Designed a toggleable directory viewer, shuffle functionality, and volume control for an intuitive experience.
                 </div>
-</li>
-<li style="cursor: default; pointer-events: none;">🔹 Car Dealership Management Platform (Java, SQL)
+<li onclick="toggleProjectDetails('carplatform')" style="cursor: pointer; pointer-events: auto;">🔹 Car Dealership Management Platform (Java, SQL)</li>
 <div class="project-details" id="carplatform">
 <li style="cursor: pointer; pointer-events: auto;"><a href="docs/Ca_Dealership_Lab_Report.pdf" target="_blank">Project Report (PDF)</a></li>
 
                     Engineered a Java-based inventory system following SOLID design principles.
                     Implemented role-based authentication with admin and customer logins.
                 </div>
-</li>
-<li style="cursor: default; pointer-events: none;">🔹 Responsive React Website (React, JavaScript, CSS)
+<li onclick="toggleProjectDetails('reactsite')" style="cursor: pointer; pointer-events: auto;">🔹 Responsive React Website (React, JavaScript, CSS)</li>
 <div class="project-details" id="reactsite">
                     Developed a mobile-responsive website using React with reusable components and smooth animations.
                 </div>
-</li>
 </ul>
 </div>
 <div class="section" id="experience" style="line-height: 1.4;"><h2>Experience</h2><div style="margin-bottom:18px;"><strong>Certified Process Server – Self-Employed</strong><br/><span>📍 El Paso, TX | March 2021 – Present</span><ul><li style="cursor: default; user-select: text; pointer-events: none;">• Delivered legal documents in compliance with state regulations</li><li style="cursor: default; user-select: text; pointer-events: none;">• Independently managed communication, scheduling, and finances</li><li style="cursor: default; user-select: text; pointer-events: none;">• Balanced work with academic load, developing strong time management</li></ul></div><div><strong>Customer Support &amp; Community Moderator – Safemoon LLC</strong><br/><span>📍 Remote | June 2021 – September 2024</span><ul><li style="cursor: default; user-select: text; pointer-events: none;">• Supported users of a multi-chain crypto wallet during live service events</li><li style="cursor: default; user-select: text; pointer-events: none;">• Diagnosed technical issues, resolved sync/login errors, and led users through token migrations</li><li style="cursor: default; user-select: text; pointer-events: none;">• Investigated blockchain ledgers to recover lost funds and educate customers on crypto safety</li><li style="cursor: default; user-select: text; pointer-events: none;">• Trained new moderators on professional communication and technical issue resolution</li></ul></div></div>
