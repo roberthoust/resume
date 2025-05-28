@@ -74,9 +74,15 @@
         }
         li {
             margin-bottom: 10px;
-            cursor: pointer;
             font-weight: 600;
             transition: 0.3s;
+            cursor: default; /* Not clickable */
+            user-select: text;
+            pointer-events: none; /* Prevents click events */
+        }
+        li a {
+            pointer-events: auto; /* Allow links to be clickable */
+            cursor: pointer;
         }
         li:hover {
             color: #0056b3;
@@ -192,23 +198,28 @@
     <!-- EXPERIENCE -->
     <div class="section" id="experience">
         <h2>Experience</h2>
-        <p><strong>Certified Process Server – Self-Employed</strong><br>El Paso, TX | March 2021 – Present</p>
-        <ul>
-            <li>Delivered legal documents in compliance with Texas laws</li>
-            <li>Managed all scheduling, client communication, and finances independently</li>
-            <li>Balanced professional duties with full academic workload</li>
-        </ul>
-
-        <p><strong>Customer Support & Community Moderator – Safemoon LLC</strong><br>Remote | June 2021 – September 2024</p>
-        <ul>
-            <li>Provided real-time support for a crypto wallet across multiple blockchains</li>
-            <li>Resolved login, sync, and token migration issues during live service events</li>
-            <li>Analyzed blockchain transactions to recover lost funds</li>
-            <li>Led onboarding and training for new moderators in technical and communication practices</li>
-        </ul>
+        <div style="margin-bottom:18px;">
+            <strong>Certified Process Server – Self-Employed</strong><br>
+            <span>El Paso, TX | March 2021 – Present</span>
+            <ul>
+                <li>Delivered legal documents in compliance with Texas laws</li>
+                <li>Managed all scheduling, client communication, and finances independently</li>
+                <li>Balanced professional duties with full academic workload</li>
+            </ul>
+        </div>
+        <div>
+            <strong>Customer Support & Community Moderator – Safemoon LLC</strong><br>
+            <span>Remote | June 2021 – September 2024</span>
+            <ul>
+                <li>Provided real-time support for a crypto wallet across multiple blockchains</li>
+                <li>Resolved login, sync, and token migration issues during live service events</li>
+                <li>Analyzed blockchain transactions to recover lost funds</li>
+                <li>Led onboarding and training for new moderators in technical and communication practices</li>
+            </ul>
+        </div>
     </div>
 
-        <!-- ACHIEVEMENTS -->
+        <!-- AWARDS & ACHIEVEMENTS -->
     <div class="section" id="awards">
         <h2>Awards & Achievements</h2>
         <ul>
@@ -218,12 +229,16 @@
             <li>High success rate in resolving crypto wallet issues</li>
             <li>Maintained a 4.0 GPA through advanced CS coursework</li>
         </ul>
+    </div>
+
     <!-- INTERESTS -->
     <div class="section" id="interests">
         <h2>Interests</h2>
-        <p>Open-source contributions, backend architecture, and logic design</p>
-        <p>Technical communication and user education</p>
-        <p>Improving UX via feedback loops and data-driven iteration</p>
+        <ul>
+            <li>Open-source contributions, backend architecture, and logic design</li>
+            <li>Technical communication and user education</li>
+            <li>Improving UX via feedback loops and data-driven iteration</li>
+        </ul>
     </div>
 </body>
 </html>
