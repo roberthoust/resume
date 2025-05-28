@@ -76,7 +76,6 @@
             margin-bottom: 10px;
             cursor: pointer;
             font-weight: 600;
-            color: #007bff;
             transition: 0.3s;
         }
         li:hover {
@@ -96,6 +95,13 @@
             color: #000;
             font-weight: 500;
             font-size: 1rem;
+        }
+        /* Make all links blue except navbar */
+        a:not(.navbar a) {
+            color: #007bff;
+        }
+        a:not(.navbar a):hover {
+            color: #0056b3;
         }
     </style>
     <script>
